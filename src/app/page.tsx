@@ -32,8 +32,11 @@ interface Message {
 const PRESETS = [
   'I need a 200-ton chiller for a hospital',
   'Compare Greenheck vs Nortek air handling units',
-  'What are the code requirements for smoke control?',
+  'What does ASHRAE 90.1 require for economizers?',
+  'Who reps Multistack in the DC metro area?',
+  'ASHRAE 15 refrigerant safety requirements for machine rooms',
   'Which VRF systems support heat recovery?',
+  'Standard 62.1 ventilation rates for a school gymnasium',
 ];
 
 // ─── Render Answer with Citation Links ────────────────────────────────────────
