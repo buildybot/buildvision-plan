@@ -101,40 +101,9 @@ function Spinner() {
   );
 }
 
-// ─── Platform Features ────────────────────────────────────────────────────────
+// ─── Flow Chart Data ──────────────────────────────────────────────────────────
 
-const FEATURES = [
-  {
-    icon: '🔍',
-    title: 'Equipment Selection',
-    desc: 'AI-powered search across every major manufacturer. Compare specs, efficiency ratings, and pricing in seconds.',
-  },
-  {
-    icon: '📐',
-    title: 'Plan Upload',
-    desc: 'Upload construction drawings. Get equipment recommendations matched to your project requirements.',
-  },
-  {
-    icon: '📬',
-    title: 'Email Integration',
-    desc: 'Forward rep emails. Auto-extract specs, pricing, and quotes — no manual data entry.',
-  },
-  {
-    icon: '📋',
-    title: 'Code Compliance',
-    desc: 'ASHRAE standards, building codes, smoke control requirements — instant, sourced answers.',
-  },
-  {
-    icon: '📦',
-    title: 'Manufacturer Data',
-    desc: 'Full catalogs, submittals, and specs from 73 manufacturers. Always current, always searchable.',
-  },
-  {
-    icon: '📞',
-    title: 'Rep Intelligence',
-    desc: 'Know which reps cover your territory. Who to call, what they carry, how to reach them.',
-  },
-];
+// No features array needed — replaced with flow chart
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
@@ -376,30 +345,152 @@ export default function Page() {
         </p>
       </section>
 
-      {/* ── Platform ───────────────────────────────────────────────────────── */}
-      <section className="px-4 sm:px-6 pb-24 max-w-5xl mx-auto w-full">
+      {/* ── How It Works — Flow Chart ─────────────────────────────────────── */}
+      <section className="px-4 sm:px-6 pb-24 max-w-6xl mx-auto w-full">
         <div className="section-divider mb-16" />
 
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">The Platform</h2>
-          <p className="text-slate-400">Built for the full MEP workflow — not just one piece of it.</p>
+        <div className="text-center mb-14">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">How It Works</h2>
+          <p className="text-slate-400 max-w-2xl mx-auto">Every piece of equipment data flows through one platform. Engineers get the best answers. Manufacturers get the best customers.</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {FEATURES.map((f) => (
-            <div key={f.title} className="glass rounded-xl p-5">
-              <div className="text-2xl mb-3">{f.icon}</div>
-              <h3 className="text-white font-semibold mb-1.5">{f.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">{f.desc}</p>
+        {/* ── INTAKE ROW ── */}
+        <div className="mb-3">
+          <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4 text-center">Intake</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+            {[
+              { icon: '💬', label: 'Equipment Queries', sub: '"I need a 200-ton chiller for a hospital"' },
+              { icon: '📐', label: 'Construction Plans', sub: 'Upload drawings, get equipment recs' },
+              { icon: '📧', label: 'Email Forwarding', sub: 'Forward rep emails → auto-extract specs' },
+              { icon: '📋', label: 'Code Questions', sub: 'ASHRAE, IECC, smoke control, ventilation' },
+              { icon: '🔍', label: 'Product Search', sub: 'Compare specs across manufacturers' },
+            ].map((item) => (
+              <div key={item.label} className="glass rounded-xl p-4 text-center hover:border-blue-400/30 transition-colors">
+                <div className="text-2xl mb-2">{item.icon}</div>
+                <p className="text-sm font-semibold text-white mb-1">{item.label}</p>
+                <p className="text-xs text-slate-500 leading-snug">{item.sub}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Arrow down */}
+        <div className="flex justify-center py-4">
+          <div className="flex flex-col items-center">
+            <div className="w-px h-8 bg-gradient-to-b from-blue-400/50 to-blue-400/20" />
+            <svg width="16" height="10" viewBox="0 0 16 10" className="text-blue-400/50"><path d="M8 10L0 0h16L8 10z" fill="currentColor"/></svg>
+          </div>
+        </div>
+
+        {/* ── BUILDVISION CORE ── */}
+        <div className="mb-3">
+          <div className="relative gradient-border rounded-2xl p-6 sm:p-8" style={{ background: 'linear-gradient(135deg, rgba(96,165,250,0.06), rgba(167,139,250,0.04))' }}>
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-blue-500 text-white">
+              BuildVision Atlas
             </div>
-          ))}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+              <div className="text-center p-3">
+                <div className="text-2xl mb-2">🧠</div>
+                <p className="text-sm font-semibold text-white">AI Processing</p>
+                <p className="text-xs text-slate-400 mt-1">RAG across 28K+ docs from 73 manufacturers. Every answer cites its source.</p>
+              </div>
+              <div className="text-center p-3">
+                <div className="text-2xl mb-2">📊</div>
+                <p className="text-sm font-semibold text-white">Data Extraction</p>
+                <p className="text-xs text-slate-400 mt-1">Specs, capacities, efficiency ratings, model numbers — structured from submittals &amp; catalogs.</p>
+              </div>
+              <div className="text-center p-3">
+                <div className="text-2xl mb-2">🏗️</div>
+                <p className="text-sm font-semibold text-white">Intent Matching</p>
+                <p className="text-xs text-slate-400 mt-1">Understands project context. Matches requirements to products. Routes interest to the right manufacturer.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="mt-10 text-center">
-          <p className="text-slate-400 text-sm">
-            Free for engineers and contractors.{' '}
-            <span className="text-slate-300">Manufacturers pay for visibility, leads, and market intelligence.</span>
-          </p>
+        {/* Arrow splits left and right */}
+        <div className="flex justify-center py-4">
+          <div className="flex items-end gap-16 sm:gap-32">
+            <div className="flex flex-col items-center">
+              <div className="w-px h-8 bg-gradient-to-b from-green-400/50 to-green-400/20" />
+              <svg width="16" height="10" viewBox="0 0 16 10" className="text-green-400/50"><path d="M8 10L0 0h16L8 10z" fill="currentColor"/></svg>
+              <span className="text-[10px] text-green-400/70 font-semibold uppercase tracking-wider mt-1">Free</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-px h-8 bg-gradient-to-b from-amber-400/50 to-amber-400/20" />
+              <svg width="16" height="10" viewBox="0 0 16 10" className="text-amber-400/50"><path d="M8 10L0 0h16L8 10z" fill="currentColor"/></svg>
+              <span className="text-[10px] text-amber-400/70 font-semibold uppercase tracking-wider mt-1">Revenue</span>
+            </div>
+          </div>
+        </div>
+
+        {/* ── OUTPUT ROW — Two sides ── */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {/* Left: Engineers & Contractors (FREE) */}
+          <div className="rounded-2xl p-5 sm:p-6" style={{ background: 'rgba(52,211,153,0.04)', border: '1px solid rgba(52,211,153,0.15)' }}>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-green-500/20 text-green-400 border border-green-400/30">Free</span>
+              <h3 className="text-lg font-bold text-white">Engineers &amp; Contractors</h3>
+            </div>
+            <div className="space-y-3">
+              {[
+                { label: 'Equipment answers', detail: 'Sourced from real manufacturer data' },
+                { label: 'Code compliance', detail: 'ASHRAE, IECC, building codes' },
+                { label: 'Spec comparisons', detail: 'Side-by-side across manufacturers' },
+                { label: 'Rep contacts', detail: 'Who covers your territory' },
+                { label: 'Plan analysis', detail: 'Upload drawings → equipment list' },
+                { label: 'Email integration', detail: 'Forward rep quotes → auto-organize' },
+              ].map((item) => (
+                <div key={item.label} className="flex items-start gap-2.5">
+                  <div className="w-1.5 h-1.5 rounded-full bg-green-400/60 mt-1.5 flex-shrink-0" />
+                  <div>
+                    <span className="text-sm text-white font-medium">{item.label}</span>
+                    <span className="text-sm text-slate-500"> — {item.detail}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-green-400/50 mt-4 pt-3 border-t border-green-400/10">~90,000 MEP engineers in the US. Become the tool they can&apos;t work without.</p>
+          </div>
+
+          {/* Right: Manufacturers & Reps (PAID) */}
+          <div className="rounded-2xl p-5 sm:p-6" style={{ background: 'rgba(251,191,36,0.04)', border: '1px solid rgba(251,191,36,0.15)' }}>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-400/30">Paid</span>
+              <h3 className="text-lg font-bold text-white">Manufacturers &amp; Reps</h3>
+            </div>
+            <div className="space-y-3">
+              {[
+                { label: 'Qualified leads', detail: 'Engineers actively specifying your equipment' },
+                { label: 'Visibility', detail: 'Your products surface when engineers search' },
+                { label: 'Market intelligence', detail: 'What engineers ask about, what they compare' },
+                { label: 'Content placement', detail: 'Your specs, case studies, and submittals featured' },
+                { label: 'Territory mapping', detail: 'Route leads to the right local rep' },
+                { label: 'Competitive insight', detail: 'Know when you&apos;re being compared — and to whom' },
+              ].map((item) => (
+                <div key={item.label} className="flex items-start gap-2.5">
+                  <div className="w-1.5 h-1.5 rounded-full bg-amber-400/60 mt-1.5 flex-shrink-0" />
+                  <div>
+                    <span className="text-sm text-white font-medium">{item.label}</span>
+                    <span className="text-sm text-slate-500"> — {item.detail}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-amber-400/50 mt-4 pt-3 border-t border-amber-400/10">Modeled on OpenEvidence: free for practitioners, funded by the industry. $70–$150+ CPM at scale.</p>
+          </div>
+        </div>
+
+        {/* ── Revenue arrow back up ── */}
+        <div className="flex justify-center py-6">
+          <div className="glass rounded-xl px-6 py-3 flex items-center gap-3">
+            <span className="text-amber-400 text-lg">💰</span>
+            <div>
+              <p className="text-sm font-semibold text-white">Revenue Model</p>
+              <p className="text-xs text-slate-400">Manufacturers pay for visibility &amp; leads → BuildVision stays free for engineers → more engineers → more value for manufacturers</p>
+            </div>
+            <span className="text-green-400 text-lg">♻️</span>
+          </div>
         </div>
       </section>
 
