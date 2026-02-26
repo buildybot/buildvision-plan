@@ -484,16 +484,168 @@ export default function Page() {
           </div>
         </div>
 
-        {/* ── Revenue arrow back up ── */}
-        <div className="flex justify-center py-6">
-          <div className="glass rounded-xl px-6 py-3 flex items-center gap-3">
-            <span className="text-amber-400 text-lg">💰</span>
+      </section>
+
+      {/* ── Revenue Model — Full Flow ──────────────────────────────────────── */}
+      <section className="px-4 sm:px-6 pb-24 max-w-6xl mx-auto w-full">
+        <div className="section-divider mb-16" />
+
+        <div className="text-center mb-14">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Revenue Model</h2>
+          <p className="text-slate-400 max-w-2xl mx-auto">Free for verified MEP professionals. Funded by manufacturers who want to reach them.</p>
+        </div>
+
+        {/* ── Verification Gate (OpenEvidence parallel) ── */}
+        <div className="mb-8 rounded-2xl p-6 sm:p-8" style={{ background: 'rgba(96,165,250,0.04)', border: '1px solid rgba(96,165,250,0.12)' }}>
+          <div className="flex items-start gap-4 mb-5">
+            <div className="text-3xl flex-shrink-0">🔐</div>
             <div>
-              <p className="text-sm font-semibold text-white">Revenue Model</p>
-              <p className="text-xs text-slate-400">Manufacturers pay for visibility &amp; leads → BuildVision stays free for engineers → more engineers → more value for manufacturers</p>
+              <h3 className="text-lg font-bold text-white mb-1">Verified User Model</h3>
+              <p className="text-sm text-slate-400 leading-relaxed">The same model that made OpenEvidence a $12B company. Unverified users get limited access. Verified MEP professionals get unlimited, free access — creating the most valuable audience in construction.</p>
             </div>
-            <span className="text-green-400 text-lg">♻️</span>
           </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="glass rounded-xl p-4">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-slate-500 text-lg">👤</span>
+                <p className="text-sm font-semibold text-slate-300">Unverified</p>
+              </div>
+              <p className="text-xs text-slate-500 leading-relaxed">Limited questions per week. Enough to see the value. Gated to drive verification.</p>
+              <div className="mt-3 px-3 py-2 rounded-lg text-xs text-slate-500 italic" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)' }}>
+                &ldquo;You&apos;ve reached the weekly limit. Verify your PE license or employer to unlock unlimited access — it&apos;s free.&rdquo;
+              </div>
+            </div>
+            <div className="glass rounded-xl p-4" style={{ borderColor: 'rgba(52,211,153,0.25)' }}>
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-green-400 text-lg">✅</span>
+                <p className="text-sm font-semibold text-green-300">Verified MEP Professional</p>
+              </div>
+              <p className="text-xs text-slate-400 leading-relaxed">Unlimited access. Verified via PE license, employer domain, or professional credentials. This is the audience manufacturers pay to reach.</p>
+            </div>
+            <div className="glass rounded-xl p-4" style={{ borderColor: 'rgba(251,191,36,0.25)' }}>
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-amber-400 text-lg">⭐</span>
+                <p className="text-sm font-semibold text-amber-300">Manufacturer / Rep</p>
+              </div>
+              <p className="text-xs text-slate-400 leading-relaxed">Paid tier. Full analytics dashboard, lead routing, visibility controls, competitive intelligence, content placement.</p>
+            </div>
+          </div>
+          <p className="text-xs text-blue-400/50 mt-5 text-center">OpenEvidence verifies via NPI (physician ID). We verify via PE license, employer, or industry credentials. Same gating → same high-value verified audience.</p>
+        </div>
+
+        {/* ── Money Flow Chart ── */}
+        <div className="mb-8">
+          <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-5 text-center">Where the Money Flows</p>
+
+          {/* Data Sources (top) */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
+            <div className="rounded-xl p-4 text-center" style={{ background: 'rgba(139,92,246,0.05)', border: '1px solid rgba(139,92,246,0.2)' }}>
+              <p className="text-sm font-bold text-purple-300 mb-1">AHRI</p>
+              <p className="text-xs text-slate-500">Certified performance data. IPLV, EER, capacity ratings. Licensed via AHRI Data Subscription Program.</p>
+              <span className="inline-block mt-2 px-2 py-0.5 rounded text-[10px] font-semibold text-purple-400 bg-purple-500/10 border border-purple-400/20">Data License Partnership</span>
+            </div>
+            <div className="rounded-xl p-4 text-center" style={{ background: 'rgba(139,92,246,0.05)', border: '1px solid rgba(139,92,246,0.2)' }}>
+              <p className="text-sm font-bold text-purple-300 mb-1">ASHRAE</p>
+              <p className="text-xs text-slate-500">Standards 90.1, 62.1, 15, 34, 55. Handbooks. Guidelines. The foundation of every MEP design.</p>
+              <span className="inline-block mt-2 px-2 py-0.5 rounded text-[10px] font-semibold text-purple-400 bg-purple-500/10 border border-purple-400/20">Content License Partnership</span>
+            </div>
+            <div className="rounded-xl p-4 text-center" style={{ background: 'rgba(139,92,246,0.05)', border: '1px solid rgba(139,92,246,0.2)' }}>
+              <p className="text-sm font-bold text-purple-300 mb-1">Manufacturer Data</p>
+              <p className="text-xs text-slate-500">Submittals, catalogs, spec sheets, case studies. Scraped, uploaded, or API-integrated. 73+ manufacturers.</p>
+              <span className="inline-block mt-2 px-2 py-0.5 rounded text-[10px] font-semibold text-purple-400 bg-purple-500/10 border border-purple-400/20">Direct Integration</span>
+            </div>
+          </div>
+
+          {/* Arrow down */}
+          <div className="flex justify-center py-3">
+            <div className="flex flex-col items-center">
+              <div className="w-px h-6 bg-gradient-to-b from-purple-400/50 to-blue-400/30" />
+              <svg width="16" height="10" viewBox="0 0 16 10" className="text-blue-400/40"><path d="M8 10L0 0h16L8 10z" fill="currentColor"/></svg>
+            </div>
+          </div>
+
+          {/* Atlas core (compact) */}
+          <div className="relative gradient-border rounded-xl p-4 mb-3 text-center" style={{ background: 'linear-gradient(135deg, rgba(96,165,250,0.06), rgba(167,139,250,0.04))' }}>
+            <p className="text-sm font-bold text-white">BuildVision Atlas</p>
+            <p className="text-xs text-slate-400">All data indexed, searchable, cited. Every query generates signal.</p>
+          </div>
+
+          {/* Arrow down splits into 3 revenue streams */}
+          <div className="flex justify-center py-3">
+            <div className="flex items-end gap-8 sm:gap-20">
+              <div className="flex flex-col items-center">
+                <div className="w-px h-6 bg-gradient-to-b from-blue-400/40 to-amber-400/30" />
+                <svg width="12" height="8" viewBox="0 0 12 8" className="text-amber-400/50"><path d="M6 8L0 0h12L6 8z" fill="currentColor"/></svg>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-px h-6 bg-gradient-to-b from-blue-400/40 to-amber-400/30" />
+                <svg width="12" height="8" viewBox="0 0 12 8" className="text-amber-400/50"><path d="M6 8L0 0h12L6 8z" fill="currentColor"/></svg>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-px h-6 bg-gradient-to-b from-blue-400/40 to-amber-400/30" />
+                <svg width="12" height="8" viewBox="0 0 12 8" className="text-amber-400/50"><path d="M6 8L0 0h12L6 8z" fill="currentColor"/></svg>
+              </div>
+            </div>
+          </div>
+
+          {/* Three revenue streams */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="rounded-xl p-5" style={{ background: 'rgba(251,191,36,0.04)', border: '1px solid rgba(251,191,36,0.15)' }}>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-amber-400">📣</span>
+                <p className="text-sm font-bold text-amber-300">Visibility &amp; Placement</p>
+              </div>
+              <p className="text-xs text-slate-400 leading-relaxed mb-3">Manufacturers pay for their products to surface in relevant queries. Not ads — contextual, useful results backed by real data.</p>
+              <div className="space-y-1.5">
+                <div className="flex justify-between text-xs"><span className="text-slate-500">Model</span><span className="text-amber-300 font-medium">CPM / Per-query</span></div>
+                <div className="flex justify-between text-xs"><span className="text-slate-500">Comparable</span><span className="text-amber-300 font-medium">$70–$150+ CPM</span></div>
+                <div className="flex justify-between text-xs"><span className="text-slate-500">Precedent</span><span className="text-amber-300 font-medium">OpenEvidence</span></div>
+              </div>
+            </div>
+
+            <div className="rounded-xl p-5" style={{ background: 'rgba(251,191,36,0.04)', border: '1px solid rgba(251,191,36,0.15)' }}>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-amber-400">🎯</span>
+                <p className="text-sm font-bold text-amber-300">Lead Routing</p>
+              </div>
+              <p className="text-xs text-slate-400 leading-relaxed mb-3">When an engineer is actively specifying equipment, route that intent to the manufacturer&apos;s local rep. The highest-value lead in construction.</p>
+              <div className="space-y-1.5">
+                <div className="flex justify-between text-xs"><span className="text-slate-500">Model</span><span className="text-amber-300 font-medium">Per-lead / subscription</span></div>
+                <div className="flex justify-between text-xs"><span className="text-slate-500">Signal</span><span className="text-amber-300 font-medium">Active specification</span></div>
+                <div className="flex justify-between text-xs"><span className="text-slate-500">Routing</span><span className="text-amber-300 font-medium">Territory-matched</span></div>
+              </div>
+            </div>
+
+            <div className="rounded-xl p-5" style={{ background: 'rgba(251,191,36,0.04)', border: '1px solid rgba(251,191,36,0.15)' }}>
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-amber-400">📊</span>
+                <p className="text-sm font-bold text-amber-300">Market Intelligence</p>
+              </div>
+              <p className="text-xs text-slate-400 leading-relaxed mb-3">Aggregated, anonymized query data. What engineers search for, which products get compared, emerging demand signals by region.</p>
+              <div className="space-y-1.5">
+                <div className="flex justify-between text-xs"><span className="text-slate-500">Model</span><span className="text-amber-300 font-medium">SaaS / annual license</span></div>
+                <div className="flex justify-between text-xs"><span className="text-slate-500">Data</span><span className="text-amber-300 font-medium">Query trends + intent</span></div>
+                <div className="flex justify-between text-xs"><span className="text-slate-500">Buyer</span><span className="text-amber-300 font-medium">Product &amp; sales teams</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ── Flywheel ── */}
+        <div className="rounded-2xl p-6 sm:p-8 text-center" style={{ background: 'rgba(52,211,153,0.03)', border: '1px solid rgba(52,211,153,0.1)' }}>
+          <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">The Flywheel</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-sm">
+            <span className="glass rounded-lg px-3 py-2 text-green-300 font-medium">More verified engineers</span>
+            <span className="text-slate-600">→</span>
+            <span className="glass rounded-lg px-3 py-2 text-blue-300 font-medium">More query data &amp; signal</span>
+            <span className="text-slate-600">→</span>
+            <span className="glass rounded-lg px-3 py-2 text-amber-300 font-medium">More manufacturer revenue</span>
+            <span className="text-slate-600">→</span>
+            <span className="glass rounded-lg px-3 py-2 text-purple-300 font-medium">Better data &amp; features</span>
+            <span className="text-slate-600">→</span>
+            <span className="glass rounded-lg px-3 py-2 text-green-300 font-medium">More engineers</span>
+          </div>
+          <p className="text-xs text-slate-500 mt-5 max-w-xl mx-auto">OpenEvidence proved this model at $150M+ ARR with 90%+ margins. The construction industry has the same dynamics: high-value professionals, decision-critical information, and manufacturers willing to pay for access.</p>
         </div>
       </section>
 
