@@ -99,7 +99,7 @@ function Spinner() {
           />
         ))}
       </div>
-      <span className="text-sm text-slate-400">Searching 28,000+ documents…</span>
+      <span className="text-sm text-slate-400">Searching manufacturer documents…</span>
     </div>
   );
 }
@@ -344,7 +344,7 @@ export default function Page() {
 
         {/* Stats note */}
         <p className="text-center text-sm text-slate-500 mt-5">
-          28,000+ manufacturer documents · 73 manufacturers · Real answers from real data
+          Thousands of manufacturer documents · Real answers from real data
         </p>
       </section>
 
@@ -360,13 +360,14 @@ export default function Page() {
         {/* ── INTAKE ROW ── */}
         <div className="mb-3">
           <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4 text-center">Intake</p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
             {[
               { icon: '💬', label: 'Equipment Queries', sub: '"I need a 200-ton chiller for a hospital"' },
               { icon: '📐', label: 'Construction Plans', sub: 'Upload drawings, get equipment recs' },
               { icon: '📧', label: 'Email Forwarding', sub: 'Forward rep emails → auto-extract specs' },
               { icon: '📋', label: 'Code Questions', sub: 'ASHRAE, IECC, smoke control, ventilation' },
               { icon: '🔍', label: 'Product Search', sub: 'Compare specs across manufacturers' },
+              { icon: '📝', label: 'Selection Requests', sub: 'Submit project requirements, get matched equipment' },
             ].map((item) => (
               <div key={item.label} className="glass rounded-xl p-4 text-center hover:border-blue-400/30 transition-colors">
                 <div className="text-2xl mb-2">{item.icon}</div>
@@ -391,16 +392,21 @@ export default function Page() {
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-blue-500 text-white">
               BuildVision Atlas
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-2">
               <div className="text-center p-3">
                 <div className="text-2xl mb-2">🧠</div>
                 <p className="text-sm font-semibold text-white">AI Processing</p>
-                <p className="text-xs text-slate-400 mt-1">RAG across 28K+ docs from 73 manufacturers. Every answer cites its source.</p>
+                <p className="text-xs text-slate-400 mt-1">RAG across thousands of documents from every major manufacturer. Every answer cites its source.</p>
               </div>
               <div className="text-center p-3">
                 <div className="text-2xl mb-2">📊</div>
                 <p className="text-sm font-semibold text-white">Data Extraction</p>
                 <p className="text-xs text-slate-400 mt-1">Specs, capacities, efficiency ratings, model numbers — structured from submittals &amp; catalogs.</p>
+              </div>
+              <div className="text-center p-3">
+                <div className="text-2xl mb-2">🖥️</div>
+                <p className="text-sm font-semibold text-white">Selection Software</p>
+                <p className="text-xs text-slate-400 mt-1">Integrated with Trace, CAPS, Greenheck CAPs, and manufacturer selection tools. Unified results.</p>
               </div>
               <div className="text-center p-3">
                 <div className="text-2xl mb-2">🏗️</div>
@@ -551,7 +557,7 @@ export default function Page() {
             </div>
             <div className="rounded-xl p-4 text-center" style={{ background: 'rgba(139,92,246,0.05)', border: '1px solid rgba(139,92,246,0.2)' }}>
               <p className="text-sm font-bold text-purple-300 mb-1">Manufacturer Data</p>
-              <p className="text-xs text-slate-500">Submittals, catalogs, spec sheets, case studies. Scraped, uploaded, or API-integrated. 73+ manufacturers.</p>
+              <p className="text-xs text-slate-500">Submittals, catalogs, spec sheets, case studies. Scraped, uploaded, or API-integrated. Every major manufacturer.</p>
               <span className="inline-block mt-2 px-2 py-0.5 rounded text-[10px] font-semibold text-purple-400 bg-purple-500/10 border border-purple-400/20">Direct Integration</span>
             </div>
           </div>
