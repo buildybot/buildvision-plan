@@ -712,13 +712,13 @@ export default function Page() {
             <p className="text-xs text-green-400/60 mt-3 font-medium">Uses for free: Equipment selection, code compliance, spec comparison</p>
           </div>
 
-          {/* Standards Body */}
+          {/* Licensing Partner */}
           <div className="rounded-2xl p-6" style={{ background: 'rgba(139,92,246,0.04)', border: '1px solid rgba(139,92,246,0.15)' }}>
-            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-500/20 text-purple-400 border border-purple-400/30">Standards Body</span>
+            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-500/20 text-purple-400 border border-purple-400/30">Licensing Partner</span>
             <h3 className="text-xl font-bold text-white mt-3 mb-1">AHRI</h3>
             <p className="text-xs text-slate-500 mb-3">Air-Conditioning, Heating, and Refrigeration Institute · 300+ member companies</p>
-            <p className="text-sm text-slate-400 leading-relaxed">AHRI certifies equipment performance data — IPLV, EER, capacity ratings — that engineers rely on for every specification. BuildVision licenses this data and makes it instantly searchable alongside manufacturer submittals. AHRI gains a new distribution channel for their certified data, reaching engineers at the point of decision.</p>
-            <p className="text-xs text-purple-400/60 mt-3 font-medium">Partners via: Data licensing, extended reach to engineers</p>
+            <p className="text-sm text-slate-400 leading-relaxed">AHRI certifies equipment performance data — IPLV, EER, capacity ratings — that engineers rely on for every specification. BuildVision pays to license this data via AHRI&apos;s Data Subscription Program and makes it instantly searchable alongside manufacturer submittals. AHRI gains a new revenue stream and a distribution channel that puts their certified data in front of engineers at the point of decision.</p>
+            <p className="text-xs text-purple-400/60 mt-3 font-medium">We pay AHRI for: Certified performance data access, standards licensing</p>
           </div>
 
           {/* GC */}
@@ -746,65 +746,13 @@ export default function Page() {
         <div className="section-divider mb-16" />
 
         <div className="text-center mb-14">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Target Contacts</h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">Key people across every organization we should be talking to.</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Licensing Contacts</h2>
+          <p className="text-slate-400 max-w-2xl mx-auto">Key people at standards organizations for data and content licensing partnerships.</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {/* Manufacturers */}
+        <div className="max-w-2xl mx-auto">
           <div className="glass rounded-xl p-5">
-            <h3 className="text-sm font-bold text-amber-300 uppercase tracking-wider mb-4">Manufacturers</h3>
-            <div className="space-y-3">
-              <div>
-                <p className="text-sm text-white font-medium">Jon Creisher</p>
-                <p className="text-xs text-slate-500">Director, Strategic Partnerships — Greenheck</p>
-                <p className="text-xs text-blue-400">jon.creisher@greenheck.com</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Engineering */}
-          <div className="glass rounded-xl p-5">
-            <h3 className="text-sm font-bold text-green-300 uppercase tracking-wider mb-4">Engineering Firms</h3>
-            <div className="space-y-3">
-              <div>
-                <p className="text-sm text-white font-medium">Rod Manson</p>
-                <p className="text-xs text-slate-500">Director — Buro Happold</p>
-                <p className="text-xs text-blue-400">rod.manson@burohappold.com</p>
-              </div>
-              <div>
-                <p className="text-sm text-white font-medium">May Winfield</p>
-                <p className="text-xs text-slate-500">Global Director, Commercial &amp; Digital Risks — Buro Happold</p>
-                <p className="text-xs text-blue-400">may.winfield@burohappold.com</p>
-              </div>
-            </div>
-          </div>
-
-          {/* GCs & Subs */}
-          <div className="glass rounded-xl p-5">
-            <h3 className="text-sm font-bold text-cyan-300 uppercase tracking-wider mb-4">GCs &amp; Subcontractors</h3>
-            <div className="space-y-3">
-              <div>
-                <p className="text-sm text-white font-medium">Loren Beas</p>
-                <p className="text-xs text-slate-500">Director of Business Development — Structure Tone</p>
-                <p className="text-xs text-blue-400">loren.beas@structuretone.com</p>
-              </div>
-              <div>
-                <p className="text-sm text-white font-medium">Marty Cunningham</p>
-                <p className="text-xs text-slate-500">EVP, Business Development — Donnelly Mechanical</p>
-                <p className="text-xs text-blue-400">mcunningham@donnellymech.com</p>
-              </div>
-              <div>
-                <p className="text-sm text-white font-medium">Tiziano Sartori</p>
-                <p className="text-xs text-slate-500">Chief Operating Officer — Donnelly Mechanical</p>
-                <p className="text-xs text-blue-400">tsartori@donnellymech.com</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Standards & Licensing */}
-          <div className="glass rounded-xl p-5">
-            <h3 className="text-sm font-bold text-purple-300 uppercase tracking-wider mb-4">Standards &amp; Licensing</h3>
+            <h3 className="text-sm font-bold text-purple-300 uppercase tracking-wider mb-4">Standards &amp; Licensing Contacts</h3>
             <div className="space-y-3">
               <div>
                 <p className="text-sm text-white font-medium">Jim Pauley</p>
