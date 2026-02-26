@@ -185,8 +185,8 @@ export default function Page() {
         <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-white mb-5">
           BuildVision
         </h1>
-        <p className="text-xl sm:text-2xl text-slate-400 max-w-xl">
-          The one place every MEP professional needs.
+        <p className="text-xl sm:text-2xl text-slate-400 max-w-2xl">
+          AI-powered equipment selection for the MEP industry. Free for engineers. Funded by manufacturers.
         </p>
       </section>
 
@@ -217,6 +217,16 @@ export default function Page() {
           </div>
         </div>
       </div>
+
+      {/* ── The Problem ──────────────────────────────────────────────────── */}
+      <section className="px-4 sm:px-6 pb-12 max-w-3xl mx-auto w-full">
+        <div className="glass rounded-2xl p-6 sm:p-8 text-center">
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+            Today, MEP engineers spend hours digging through manufacturer PDFs, calling reps for specs, cross-referencing codes manually, and emailing back and forth for quotes. There is no single source of truth for equipment selection.
+          </p>
+          <p className="text-sm sm:text-base text-white font-semibold mt-3">BuildVision changes that.</p>
+        </div>
+      </section>
 
       {/* ── Live Demo ──────────────────────────────────────────────────────── */}
       <section className="px-4 sm:px-6 pb-24 max-w-4xl mx-auto w-full">
@@ -376,7 +386,7 @@ export default function Page() {
         </p>
       </section>
 
-      {/* ── How It Works — Flow Chart ─────────────────────────────────────── */}
+      {/* ── Unified Flow — How It Works + Revenue ──────────────────────────── */}
       <section className="px-4 sm:px-6 pb-24 max-w-6xl mx-auto w-full">
         <div className="section-divider mb-16" />
 
@@ -385,17 +395,47 @@ export default function Page() {
           <p className="text-slate-400 max-w-2xl mx-auto">Every piece of equipment data flows through one platform. Engineers get the best answers. Manufacturers get the best customers.</p>
         </div>
 
+        {/* ── DATA SOURCES ── */}
+        <div className="mb-3">
+          <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4 text-center">Data Sources</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div className="rounded-xl p-4 text-center" style={{ background: 'rgba(139,92,246,0.05)', border: '1px solid rgba(139,92,246,0.2)' }}>
+              <p className="text-sm font-bold text-purple-300 mb-1">AHRI</p>
+              <p className="text-xs text-slate-500">Certified performance data. IPLV, EER, capacity ratings.</p>
+              <span className="inline-block mt-2 px-2 py-0.5 rounded text-[10px] font-semibold text-purple-400 bg-purple-500/10 border border-purple-400/20">Data License</span>
+            </div>
+            <div className="rounded-xl p-4 text-center" style={{ background: 'rgba(139,92,246,0.05)', border: '1px solid rgba(139,92,246,0.2)' }}>
+              <p className="text-sm font-bold text-purple-300 mb-1">ASHRAE</p>
+              <p className="text-xs text-slate-500">Standards 90.1, 62.1, 15, 34, 55. Handbooks. Guidelines.</p>
+              <span className="inline-block mt-2 px-2 py-0.5 rounded text-[10px] font-semibold text-purple-400 bg-purple-500/10 border border-purple-400/20">Content License</span>
+            </div>
+            <div className="rounded-xl p-4 text-center" style={{ background: 'rgba(139,92,246,0.05)', border: '1px solid rgba(139,92,246,0.2)' }}>
+              <p className="text-sm font-bold text-purple-300 mb-1">Manufacturer Data</p>
+              <p className="text-xs text-slate-500">Submittals, catalogs, specs, case studies. Every major manufacturer.</p>
+              <span className="inline-block mt-2 px-2 py-0.5 rounded text-[10px] font-semibold text-purple-400 bg-purple-500/10 border border-purple-400/20">Direct Integration</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Arrow */}
+        <div className="flex justify-center py-3">
+          <div className="flex flex-col items-center">
+            <div className="w-px h-6 bg-gradient-to-b from-purple-400/40 to-blue-400/30" />
+            <svg width="14" height="9" viewBox="0 0 14 9" className="text-blue-400/40"><path d="M7 9L0 0h14L7 9z" fill="currentColor"/></svg>
+          </div>
+        </div>
+
         {/* ── INTAKE ROW ── */}
         <div className="mb-3">
           <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4 text-center">Intake</p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-3">
             {[
               { icon: '💬', label: 'Equipment Queries', sub: '"I need a 200-ton chiller for a hospital"' },
               { icon: '📐', label: 'Construction Plans', sub: 'Upload drawings, get equipment recs' },
               { icon: '📧', label: 'Email Forwarding', sub: 'Forward rep emails → auto-extract specs' },
               { icon: '📋', label: 'Code Questions', sub: 'ASHRAE, IECC, smoke control, ventilation' },
               { icon: '🔍', label: 'Product Search', sub: 'Compare specs across manufacturers' },
-              { icon: '📝', label: 'Selection Requests', sub: 'Submit project requirements, get matched equipment' },
+              { icon: '📝', label: 'Selection Requests', sub: 'Submit requirements, get matched equipment' },
             ].map((item) => (
               <div key={item.label} className="glass rounded-xl p-4 text-center hover:border-blue-400/30 transition-colors">
                 <div className="text-2xl mb-2">{item.icon}</div>
@@ -406,64 +446,61 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Arrow down */}
-        <div className="flex justify-center py-4">
+        {/* Arrow */}
+        <div className="flex justify-center py-3">
           <div className="flex flex-col items-center">
-            <div className="w-px h-8 bg-gradient-to-b from-blue-400/50 to-blue-400/20" />
-            <svg width="16" height="10" viewBox="0 0 16 10" className="text-blue-400/50"><path d="M8 10L0 0h16L8 10z" fill="currentColor"/></svg>
+            <div className="w-px h-6 bg-gradient-to-b from-blue-400/40 to-blue-400/20" />
+            <svg width="14" height="9" viewBox="0 0 14 9" className="text-blue-400/40"><path d="M7 9L0 0h14L7 9z" fill="currentColor"/></svg>
           </div>
         </div>
 
         {/* ── BUILDVISION CORE ── */}
         <div className="mb-3">
           <div className="relative gradient-border rounded-2xl p-6 sm:p-8" style={{ background: 'linear-gradient(135deg, rgba(96,165,250,0.06), rgba(167,139,250,0.04))' }}>
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-blue-500 text-white">
-              BuildVision Atlas
-            </div>
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest bg-blue-500 text-white">BuildVision Atlas</div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-2">
               <div className="text-center p-3">
                 <div className="text-2xl mb-2">🧠</div>
                 <p className="text-sm font-semibold text-white">AI Processing</p>
-                <p className="text-xs text-slate-400 mt-1">RAG across thousands of documents from every major manufacturer. Every answer cites its source.</p>
+                <p className="text-xs text-slate-400 mt-1">RAG across thousands of docs. Every answer cites its source.</p>
               </div>
               <div className="text-center p-3">
                 <div className="text-2xl mb-2">📊</div>
                 <p className="text-sm font-semibold text-white">Data Extraction</p>
-                <p className="text-xs text-slate-400 mt-1">Specs, capacities, efficiency ratings, model numbers — structured from submittals &amp; catalogs.</p>
+                <p className="text-xs text-slate-400 mt-1">Specs, capacities, efficiency ratings — structured from submittals.</p>
               </div>
               <div className="text-center p-3">
                 <div className="text-2xl mb-2">🖥️</div>
                 <p className="text-sm font-semibold text-white">Selection Software</p>
-                <p className="text-xs text-slate-400 mt-1">Integrated with Trace, CAPS, Greenheck CAPs, and manufacturer selection tools. Unified results.</p>
+                <p className="text-xs text-slate-400 mt-1">Trace, CAPS, Greenheck CAPs, manufacturer selection tools. Unified.</p>
               </div>
               <div className="text-center p-3">
                 <div className="text-2xl mb-2">🏗️</div>
                 <p className="text-sm font-semibold text-white">Intent Matching</p>
-                <p className="text-xs text-slate-400 mt-1">Understands project context. Matches requirements to products. Routes interest to the right manufacturer.</p>
+                <p className="text-xs text-slate-400 mt-1">Matches requirements to products. Routes interest to manufacturers.</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Arrow splits left and right */}
+        {/* Arrow splits */}
         <div className="flex justify-center py-4">
           <div className="flex items-end gap-16 sm:gap-32">
             <div className="flex flex-col items-center">
               <div className="w-px h-8 bg-gradient-to-b from-green-400/50 to-green-400/20" />
-              <svg width="16" height="10" viewBox="0 0 16 10" className="text-green-400/50"><path d="M8 10L0 0h16L8 10z" fill="currentColor"/></svg>
+              <svg width="14" height="9" viewBox="0 0 14 9" className="text-green-400/50"><path d="M7 9L0 0h14L7 9z" fill="currentColor"/></svg>
               <span className="text-[10px] text-green-400/70 font-semibold uppercase tracking-wider mt-1">Free</span>
             </div>
             <div className="flex flex-col items-center">
               <div className="w-px h-8 bg-gradient-to-b from-amber-400/50 to-amber-400/20" />
-              <svg width="16" height="10" viewBox="0 0 16 10" className="text-amber-400/50"><path d="M8 10L0 0h16L8 10z" fill="currentColor"/></svg>
+              <svg width="14" height="9" viewBox="0 0 14 9" className="text-amber-400/50"><path d="M7 9L0 0h14L7 9z" fill="currentColor"/></svg>
               <span className="text-[10px] text-amber-400/70 font-semibold uppercase tracking-wider mt-1">Revenue</span>
             </div>
           </div>
         </div>
 
-        {/* ── OUTPUT ROW — Two sides ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {/* Left: Engineers & Contractors (FREE) */}
+        {/* ── OUTPUT — Free / Paid ── */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
           <div className="rounded-2xl p-5 sm:p-6" style={{ background: 'rgba(52,211,153,0.04)', border: '1px solid rgba(52,211,153,0.15)' }}>
             <div className="flex items-center gap-2 mb-4">
               <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-green-500/20 text-green-400 border border-green-400/30">Free</span>
@@ -480,17 +517,11 @@ export default function Page() {
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-2.5">
                   <div className="w-1.5 h-1.5 rounded-full bg-green-400/60 mt-1.5 flex-shrink-0" />
-                  <div>
-                    <span className="text-sm text-white font-medium">{item.label}</span>
-                    <span className="text-sm text-slate-500"> — {item.detail}</span>
-                  </div>
+                  <div><span className="text-sm text-white font-medium">{item.label}</span><span className="text-sm text-slate-500"> — {item.detail}</span></div>
                 </div>
               ))}
             </div>
-            <p className="text-xs text-green-400/50 mt-4 pt-3 border-t border-green-400/10">~90,000 MEP engineers in the US. Become the tool they can&apos;t work without.</p>
           </div>
-
-          {/* Right: Manufacturers & Reps (PAID) */}
           <div className="rounded-2xl p-5 sm:p-6" style={{ background: 'rgba(251,191,36,0.04)', border: '1px solid rgba(251,191,36,0.15)' }}>
             <div className="flex items-center gap-2 mb-4">
               <span className="px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-400/30">Paid</span>
@@ -499,37 +530,22 @@ export default function Page() {
             <div className="space-y-3">
               {[
                 { label: 'Qualified leads', detail: 'Engineers actively specifying your equipment' },
-                { label: 'Visibility', detail: 'Your products surface when engineers search' },
+                { label: 'Visibility', detail: 'Products surface when engineers search' },
                 { label: 'Market intelligence', detail: 'What engineers ask about, what they compare' },
-                { label: 'Content placement', detail: 'Your specs, case studies, and submittals featured' },
+                { label: 'Content placement', detail: 'Specs, case studies, submittals featured' },
                 { label: 'Territory mapping', detail: 'Route leads to the right local rep' },
                 { label: 'Competitive insight', detail: 'Know when you&apos;re being compared — and to whom' },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-2.5">
                   <div className="w-1.5 h-1.5 rounded-full bg-amber-400/60 mt-1.5 flex-shrink-0" />
-                  <div>
-                    <span className="text-sm text-white font-medium">{item.label}</span>
-                    <span className="text-sm text-slate-500"> — {item.detail}</span>
-                  </div>
+                  <div><span className="text-sm text-white font-medium">{item.label}</span><span className="text-sm text-slate-500"> — {item.detail}</span></div>
                 </div>
               ))}
             </div>
-            <p className="text-xs text-amber-400/50 mt-4 pt-3 border-t border-amber-400/10">Modeled on OpenEvidence: free for practitioners, funded by the industry. $70–$150+ CPM at scale.</p>
           </div>
         </div>
 
-      </section>
-
-      {/* ── Revenue Model — Full Flow ──────────────────────────────────────── */}
-      <section className="px-4 sm:px-6 pb-24 max-w-6xl mx-auto w-full">
-        <div className="section-divider mb-16" />
-
-        <div className="text-center mb-14">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Revenue Model</h2>
-          <p className="text-slate-400 max-w-2xl mx-auto">Free for verified MEP professionals. Funded by manufacturers who want to reach them.</p>
-        </div>
-
-        {/* ── Verification Gate (OpenEvidence parallel) ── */}
+        {/* ── Verification Gate ── */}
         <div className="mb-8 rounded-2xl p-6 sm:p-8" style={{ background: 'rgba(96,165,250,0.04)', border: '1px solid rgba(96,165,250,0.12)' }}>
           <div className="flex items-start gap-4 mb-5">
             <div className="text-3xl flex-shrink-0">🔐</div>
@@ -544,7 +560,7 @@ export default function Page() {
                 <span className="text-slate-500 text-lg">👤</span>
                 <p className="text-sm font-semibold text-slate-300">Unverified</p>
               </div>
-              <p className="text-xs text-slate-500 leading-relaxed">Limited questions per week. Enough to see the value. Gated to drive verification.</p>
+              <p className="text-xs text-slate-500 leading-relaxed">Limited questions per week. Enough to see the value.</p>
               <div className="mt-3 px-3 py-2 rounded-lg text-xs text-slate-500 italic" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)' }}>
                 &ldquo;You&apos;ve reached the weekly limit. Verify your PE license or employer to unlock unlimited access — it&apos;s free.&rdquo;
               </div>
@@ -554,111 +570,79 @@ export default function Page() {
                 <span className="text-green-400 text-lg">✅</span>
                 <p className="text-sm font-semibold text-green-300">Verified MEP Professional</p>
               </div>
-              <p className="text-xs text-slate-400 leading-relaxed">Unlimited access. Verified via PE license, employer domain, or professional credentials. This is the audience manufacturers pay to reach.</p>
+              <p className="text-xs text-slate-400 leading-relaxed">Unlimited access. Verified via PE license, employer domain, or professional credentials.</p>
             </div>
             <div className="glass rounded-xl p-4" style={{ borderColor: 'rgba(251,191,36,0.25)' }}>
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-amber-400 text-lg">⭐</span>
                 <p className="text-sm font-semibold text-amber-300">Manufacturer / Rep</p>
               </div>
-              <p className="text-xs text-slate-400 leading-relaxed">Paid tier. Full analytics dashboard, lead routing, visibility controls, competitive intelligence, content placement.</p>
+              <p className="text-xs text-slate-400 leading-relaxed">Paid tier. Analytics dashboard, lead routing, visibility controls, competitive intelligence.</p>
             </div>
           </div>
-          <p className="text-xs text-blue-400/50 mt-5 text-center">OpenEvidence verifies via NPI (physician ID). We verify via PE license, employer, or industry credentials. Same gating → same high-value verified audience.</p>
         </div>
 
-        {/* ── Money Flow Chart ── */}
+        {/* ── Manufacturer Dashboard Mock ── */}
         <div className="mb-8">
-          <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-5 text-center">Where the Money Flows</p>
-
-          {/* Data Sources (top) */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-3">
-            <div className="rounded-xl p-4 text-center" style={{ background: 'rgba(139,92,246,0.05)', border: '1px solid rgba(139,92,246,0.2)' }}>
-              <p className="text-sm font-bold text-purple-300 mb-1">AHRI</p>
-              <p className="text-xs text-slate-500">Certified performance data. IPLV, EER, capacity ratings. Licensed via AHRI Data Subscription Program.</p>
-              <span className="inline-block mt-2 px-2 py-0.5 rounded text-[10px] font-semibold text-purple-400 bg-purple-500/10 border border-purple-400/20">Data License Partnership</span>
+          <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-5 text-center">What Manufacturers See</p>
+          <div className="glass rounded-2xl p-6 sm:p-8" style={{ boxShadow: '0 0 40px rgba(251,191,36,0.05)' }}>
+            <div className="flex items-center gap-3 mb-5 pb-4 border-b border-white/5">
+              <div className="w-2 h-2 rounded-full bg-green-400" />
+              <span className="text-sm font-bold text-white">Manufacturer Dashboard</span>
+              <span className="text-xs text-slate-500">— Trane (Example)</span>
             </div>
-            <div className="rounded-xl p-4 text-center" style={{ background: 'rgba(139,92,246,0.05)', border: '1px solid rgba(139,92,246,0.2)' }}>
-              <p className="text-sm font-bold text-purple-300 mb-1">ASHRAE</p>
-              <p className="text-xs text-slate-500">Standards 90.1, 62.1, 15, 34, 55. Handbooks. Guidelines. The foundation of every MEP design.</p>
-              <span className="inline-block mt-2 px-2 py-0.5 rounded text-[10px] font-semibold text-purple-400 bg-purple-500/10 border border-purple-400/20">Content License Partnership</span>
-            </div>
-            <div className="rounded-xl p-4 text-center" style={{ background: 'rgba(139,92,246,0.05)', border: '1px solid rgba(139,92,246,0.2)' }}>
-              <p className="text-sm font-bold text-purple-300 mb-1">Manufacturer Data</p>
-              <p className="text-xs text-slate-500">Submittals, catalogs, spec sheets, case studies. Scraped, uploaded, or API-integrated. Every major manufacturer.</p>
-              <span className="inline-block mt-2 px-2 py-0.5 rounded text-[10px] font-semibold text-purple-400 bg-purple-500/10 border border-purple-400/20">Direct Integration</span>
-            </div>
-          </div>
-
-          {/* Arrow down */}
-          <div className="flex justify-center py-3">
-            <div className="flex flex-col items-center">
-              <div className="w-px h-6 bg-gradient-to-b from-purple-400/50 to-blue-400/30" />
-              <svg width="16" height="10" viewBox="0 0 16 10" className="text-blue-400/40"><path d="M8 10L0 0h16L8 10z" fill="currentColor"/></svg>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {[
+                { value: '1,247', label: 'Queries This Month', color: 'text-blue-300' },
+                { value: 'Centrifugal Chillers', label: 'Top Search Category', color: 'text-green-300' },
+                { value: 'Carrier', label: 'Top Competing Brand', color: 'text-red-300' },
+                { value: '34', label: 'Active Projects Mentioning Trane', color: 'text-purple-300' },
+                { value: '12', label: 'Leads Routed to Reps', color: 'text-amber-300' },
+                { value: 'Northeast', label: 'Highest Demand Territory', color: 'text-cyan-300' },
+              ].map((stat) => (
+                <div key={stat.label} className="rounded-xl p-4" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)' }}>
+                  <p className={`text-lg sm:text-xl font-bold ${stat.color}`}>{stat.value}</p>
+                  <p className="text-xs text-slate-500 mt-1">{stat.label}</p>
+                </div>
+              ))}
             </div>
           </div>
+        </div>
 
-          {/* Atlas core (compact) */}
-          <div className="relative gradient-border rounded-xl p-4 mb-3 text-center" style={{ background: 'linear-gradient(135deg, rgba(96,165,250,0.06), rgba(167,139,250,0.04))' }}>
-            <p className="text-sm font-bold text-white">BuildVision Atlas</p>
-            <p className="text-xs text-slate-400">All data indexed, searchable, cited. Every query generates signal.</p>
-          </div>
-
-          {/* Arrow down splits into 3 revenue streams */}
-          <div className="flex justify-center py-3">
-            <div className="flex items-end gap-8 sm:gap-20">
-              <div className="flex flex-col items-center">
-                <div className="w-px h-6 bg-gradient-to-b from-blue-400/40 to-amber-400/30" />
-                <svg width="12" height="8" viewBox="0 0 12 8" className="text-amber-400/50"><path d="M6 8L0 0h12L6 8z" fill="currentColor"/></svg>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="w-px h-6 bg-gradient-to-b from-blue-400/40 to-amber-400/30" />
-                <svg width="12" height="8" viewBox="0 0 12 8" className="text-amber-400/50"><path d="M6 8L0 0h12L6 8z" fill="currentColor"/></svg>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="w-px h-6 bg-gradient-to-b from-blue-400/40 to-amber-400/30" />
-                <svg width="12" height="8" viewBox="0 0 12 8" className="text-amber-400/50"><path d="M6 8L0 0h12L6 8z" fill="currentColor"/></svg>
-              </div>
-            </div>
-          </div>
-
-          {/* Three revenue streams */}
+        {/* ── Revenue Streams ── */}
+        <div className="mb-8">
+          <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-5 text-center">Revenue Streams</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="rounded-xl p-5" style={{ background: 'rgba(251,191,36,0.04)', border: '1px solid rgba(251,191,36,0.15)' }}>
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-amber-400">📣</span>
                 <p className="text-sm font-bold text-amber-300">Visibility &amp; Placement</p>
               </div>
-              <p className="text-xs text-slate-400 leading-relaxed mb-3">Manufacturers pay for their products to surface in relevant queries. Not ads — contextual, useful results backed by real data.</p>
+              <p className="text-xs text-slate-400 leading-relaxed mb-3">Products surface in relevant queries. Not ads — contextual results backed by real data.</p>
               <div className="space-y-1.5">
                 <div className="flex justify-between text-xs"><span className="text-slate-500">Model</span><span className="text-amber-300 font-medium">CPM / Per-query</span></div>
                 <div className="flex justify-between text-xs"><span className="text-slate-500">Comparable</span><span className="text-amber-300 font-medium">$70–$150+ CPM</span></div>
-                <div className="flex justify-between text-xs"><span className="text-slate-500">Precedent</span><span className="text-amber-300 font-medium">OpenEvidence</span></div>
               </div>
             </div>
-
             <div className="rounded-xl p-5" style={{ background: 'rgba(251,191,36,0.04)', border: '1px solid rgba(251,191,36,0.15)' }}>
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-amber-400">🎯</span>
                 <p className="text-sm font-bold text-amber-300">Lead Routing</p>
               </div>
-              <p className="text-xs text-slate-400 leading-relaxed mb-3">When an engineer is actively specifying equipment, route that intent to the manufacturer&apos;s local rep. The highest-value lead in construction.</p>
+              <p className="text-xs text-slate-400 leading-relaxed mb-3">Active specification intent routed to the manufacturer&apos;s local rep. Highest-value lead in construction.</p>
               <div className="space-y-1.5">
                 <div className="flex justify-between text-xs"><span className="text-slate-500">Model</span><span className="text-amber-300 font-medium">Per-lead / subscription</span></div>
-                <div className="flex justify-between text-xs"><span className="text-slate-500">Signal</span><span className="text-amber-300 font-medium">Active specification</span></div>
                 <div className="flex justify-between text-xs"><span className="text-slate-500">Routing</span><span className="text-amber-300 font-medium">Territory-matched</span></div>
               </div>
             </div>
-
             <div className="rounded-xl p-5" style={{ background: 'rgba(251,191,36,0.04)', border: '1px solid rgba(251,191,36,0.15)' }}>
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-amber-400">📊</span>
                 <p className="text-sm font-bold text-amber-300">Market Intelligence</p>
               </div>
-              <p className="text-xs text-slate-400 leading-relaxed mb-3">Aggregated, anonymized query data. What engineers search for, which products get compared, emerging demand signals by region.</p>
+              <p className="text-xs text-slate-400 leading-relaxed mb-3">What engineers search for, which products get compared, demand signals by region.</p>
               <div className="space-y-1.5">
-                <div className="flex justify-between text-xs"><span className="text-slate-500">Model</span><span className="text-amber-300 font-medium">SaaS / annual license</span></div>
-                <div className="flex justify-between text-xs"><span className="text-slate-500">Data</span><span className="text-amber-300 font-medium">Query trends + intent</span></div>
+                <div className="flex justify-between text-xs"><span className="text-slate-500">Model</span><span className="text-amber-300 font-medium">SaaS / annual</span></div>
                 <div className="flex justify-between text-xs"><span className="text-slate-500">Buyer</span><span className="text-amber-300 font-medium">Product &amp; sales teams</span></div>
               </div>
             </div>
@@ -666,37 +650,199 @@ export default function Page() {
         </div>
 
         {/* ── Flywheel ── */}
-        <div className="rounded-2xl p-6 sm:p-8 text-center" style={{ background: 'rgba(52,211,153,0.03)', border: '1px solid rgba(52,211,153,0.1)' }}>
+        <div className="mb-8 rounded-2xl p-6 sm:p-8 text-center" style={{ background: 'rgba(52,211,153,0.03)', border: '1px solid rgba(52,211,153,0.1)' }}>
           <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">The Flywheel</p>
-          {/* Engineer lane */}
           <p className="text-[10px] uppercase tracking-widest text-green-400/50 font-semibold mb-2">Engineers &amp; Designers</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-sm mb-5">
-            <span className="glass rounded-lg px-3 py-2 text-green-300 font-medium">More verified engineers</span>
-            <span className="text-slate-600">→</span>
-            <span className="glass rounded-lg px-3 py-2 text-blue-300 font-medium">More query data &amp; signal</span>
-            <span className="text-slate-600">→</span>
-            <span className="glass rounded-lg px-3 py-2 text-amber-300 font-medium">More manufacturer revenue</span>
-            <span className="text-slate-600">→</span>
-            <span className="glass rounded-lg px-3 py-2 text-purple-300 font-medium">Better data &amp; features</span>
-            <span className="text-slate-600">→</span>
-            <span className="glass rounded-lg px-3 py-2 text-green-300 font-medium">More engineers</span>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-sm mb-5">
+            <span className="glass rounded-lg px-3 py-2 text-green-300 font-medium text-xs sm:text-sm">More verified engineers</span>
+            <svg className="w-4 h-4 text-slate-600 rotate-90 sm:rotate-0 flex-shrink-0" viewBox="0 0 16 16" fill="currentColor"><path d="M8 12l4-4H4l4 4z"/></svg>
+            <span className="glass rounded-lg px-3 py-2 text-blue-300 font-medium text-xs sm:text-sm">More query signal</span>
+            <svg className="w-4 h-4 text-slate-600 rotate-90 sm:rotate-0 flex-shrink-0" viewBox="0 0 16 16" fill="currentColor"><path d="M8 12l4-4H4l4 4z"/></svg>
+            <span className="glass rounded-lg px-3 py-2 text-amber-300 font-medium text-xs sm:text-sm">More mfr revenue</span>
+            <svg className="w-4 h-4 text-slate-600 rotate-90 sm:rotate-0 flex-shrink-0" viewBox="0 0 16 16" fill="currentColor"><path d="M8 12l4-4H4l4 4z"/></svg>
+            <span className="glass rounded-lg px-3 py-2 text-purple-300 font-medium text-xs sm:text-sm">Better data</span>
+            <svg className="w-4 h-4 text-slate-600 rotate-90 sm:rotate-0 flex-shrink-0" viewBox="0 0 16 16" fill="currentColor"><path d="M8 12l4-4H4l4 4z"/></svg>
+            <span className="glass rounded-lg px-3 py-2 text-green-300 font-medium text-xs sm:text-sm">More engineers</span>
           </div>
-
-          {/* GC / Sub lane */}
           <p className="text-[10px] uppercase tracking-widest text-cyan-400/50 font-semibold mb-2">GCs &amp; Subcontractors</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-sm">
-            <span className="glass rounded-lg px-3 py-2 text-cyan-300 font-medium">GCs &amp; subs use BV for procurement</span>
-            <span className="text-slate-600">→</span>
-            <span className="glass rounded-lg px-3 py-2 text-blue-300 font-medium">Project-level equipment data</span>
-            <span className="text-slate-600">→</span>
-            <span className="glass rounded-lg px-3 py-2 text-amber-300 font-medium">Manufacturers see real demand</span>
-            <span className="text-slate-600">→</span>
-            <span className="glass rounded-lg px-3 py-2 text-purple-300 font-medium">Faster quotes &amp; better pricing</span>
-            <span className="text-slate-600">→</span>
-            <span className="glass rounded-lg px-3 py-2 text-cyan-300 font-medium">More GCs adopt BV</span>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-sm">
+            <span className="glass rounded-lg px-3 py-2 text-cyan-300 font-medium text-xs sm:text-sm">GCs use BV for procurement</span>
+            <svg className="w-4 h-4 text-slate-600 rotate-90 sm:rotate-0 flex-shrink-0" viewBox="0 0 16 16" fill="currentColor"><path d="M8 12l4-4H4l4 4z"/></svg>
+            <span className="glass rounded-lg px-3 py-2 text-blue-300 font-medium text-xs sm:text-sm">Project equipment data</span>
+            <svg className="w-4 h-4 text-slate-600 rotate-90 sm:rotate-0 flex-shrink-0" viewBox="0 0 16 16" fill="currentColor"><path d="M8 12l4-4H4l4 4z"/></svg>
+            <span className="glass rounded-lg px-3 py-2 text-amber-300 font-medium text-xs sm:text-sm">Real demand signal</span>
+            <svg className="w-4 h-4 text-slate-600 rotate-90 sm:rotate-0 flex-shrink-0" viewBox="0 0 16 16" fill="currentColor"><path d="M8 12l4-4H4l4 4z"/></svg>
+            <span className="glass rounded-lg px-3 py-2 text-purple-300 font-medium text-xs sm:text-sm">Better pricing</span>
+            <svg className="w-4 h-4 text-slate-600 rotate-90 sm:rotate-0 flex-shrink-0" viewBox="0 0 16 16" fill="currentColor"><path d="M8 12l4-4H4l4 4z"/></svg>
+            <span className="glass rounded-lg px-3 py-2 text-cyan-300 font-medium text-xs sm:text-sm">More GCs adopt BV</span>
+          </div>
+        </div>
+
+        {/* ── OE Comparable ── */}
+        <div className="glass rounded-xl px-6 py-4 text-center mb-0">
+          <p className="text-xs text-slate-400"><span className="font-semibold text-slate-300">Comparable:</span> OpenEvidence — same model applied to healthcare. $150M+ ARR. $12B valuation. 90%+ margins. 757K verified US physicians.</p>
+        </div>
+      </section>
+
+      {/* ── Example Companies ─────────────────────────────────────────────── */}
+      <section className="px-4 sm:px-6 pb-24 max-w-6xl mx-auto w-full">
+        <div className="section-divider mb-16" />
+
+        <div className="text-center mb-14">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Who Works With BuildVision</h2>
+          <p className="text-slate-400 max-w-2xl mx-auto">Every persona in the MEP ecosystem benefits from a single platform.</p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {/* Manufacturer */}
+          <div className="rounded-2xl p-6" style={{ background: 'rgba(251,191,36,0.04)', border: '1px solid rgba(251,191,36,0.15)' }}>
+            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-400/30">Manufacturer</span>
+            <h3 className="text-xl font-bold text-white mt-3 mb-1">Greenheck</h3>
+            <p className="text-xs text-slate-500 mb-3">$4B+ revenue · Fans, AHUs, dampers, kitchen ventilation</p>
+            <p className="text-sm text-slate-400 leading-relaxed">Greenheck produces thousands of product configurations across dozens of categories. BuildVision indexes every submittal and catalog, so when an engineer asks &ldquo;What Greenheck fan handles 10,000 CFM at 2&quot; SP?&rdquo; they get an instant, cited answer — and Greenheck gets a qualified lead routed to their local rep.</p>
+            <p className="text-xs text-amber-400/60 mt-3 font-medium">Pays for: Visibility, lead routing, competitive intelligence</p>
           </div>
 
-          <p className="text-xs text-slate-500 mt-6 max-w-xl mx-auto">OpenEvidence proved this model at $150M+ ARR with 90%+ margins. The construction industry has the same dynamics: high-value professionals, decision-critical information, and manufacturers willing to pay for access.</p>
+          {/* Engineering Firm */}
+          <div className="rounded-2xl p-6" style={{ background: 'rgba(52,211,153,0.04)', border: '1px solid rgba(52,211,153,0.15)' }}>
+            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-green-500/20 text-green-400 border border-green-400/30">Engineering Firm</span>
+            <h3 className="text-xl font-bold text-white mt-3 mb-1">Buro Happold</h3>
+            <p className="text-xs text-slate-500 mb-3">Global MEP engineering · 2,500+ employees · Complex projects</p>
+            <p className="text-sm text-slate-400 leading-relaxed">Buro Happold engineers work on hospitals, data centers, and high-rises — each requiring equipment selection across dozens of manufacturers. Instead of digging through PDFs and calling reps, they ask BuildVision. Code compliance, manufacturer specs, and rep contacts — all in one place, verified against ASHRAE standards.</p>
+            <p className="text-xs text-green-400/60 mt-3 font-medium">Uses for free: Equipment selection, code compliance, spec comparison</p>
+          </div>
+
+          {/* Standards Body */}
+          <div className="rounded-2xl p-6" style={{ background: 'rgba(139,92,246,0.04)', border: '1px solid rgba(139,92,246,0.15)' }}>
+            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-purple-500/20 text-purple-400 border border-purple-400/30">Standards Body</span>
+            <h3 className="text-xl font-bold text-white mt-3 mb-1">AHRI</h3>
+            <p className="text-xs text-slate-500 mb-3">Air-Conditioning, Heating, and Refrigeration Institute · 300+ member companies</p>
+            <p className="text-sm text-slate-400 leading-relaxed">AHRI certifies equipment performance data — IPLV, EER, capacity ratings — that engineers rely on for every specification. BuildVision licenses this data and makes it instantly searchable alongside manufacturer submittals. AHRI gains a new distribution channel for their certified data, reaching engineers at the point of decision.</p>
+            <p className="text-xs text-purple-400/60 mt-3 font-medium">Partners via: Data licensing, extended reach to engineers</p>
+          </div>
+
+          {/* GC */}
+          <div className="rounded-2xl p-6" style={{ background: 'rgba(34,211,238,0.04)', border: '1px solid rgba(34,211,238,0.15)' }}>
+            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-cyan-500/20 text-cyan-400 border border-cyan-400/30">General Contractor</span>
+            <h3 className="text-xl font-bold text-white mt-3 mb-1">Structure Tone</h3>
+            <p className="text-xs text-slate-500 mb-3">$6B+ revenue · Commercial interiors &amp; base building · Northeast US</p>
+            <p className="text-sm text-slate-400 leading-relaxed">Structure Tone manages MEP procurement across hundreds of projects. BuildVision gives their project managers real-time equipment comparisons, automated spec verification, and direct access to manufacturer reps — eliminating weeks of back-and-forth emails and phone calls during the bid process.</p>
+            <p className="text-xs text-cyan-400/60 mt-3 font-medium">Uses for free: Procurement, spec verification, rep discovery</p>
+          </div>
+
+          {/* MEP Sub */}
+          <div className="rounded-2xl p-6" style={{ background: 'rgba(34,211,238,0.04)', border: '1px solid rgba(34,211,238,0.15)' }}>
+            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-cyan-500/20 text-cyan-400 border border-cyan-400/30">MEP Subcontractor</span>
+            <h3 className="text-xl font-bold text-white mt-3 mb-1">Donnelly Mechanical</h3>
+            <p className="text-xs text-slate-500 mb-3">$500M+ revenue · NYC&apos;s largest mechanical contractor</p>
+            <p className="text-sm text-slate-400 leading-relaxed">Donnelly installs the equipment that engineers specify. BuildVision helps them verify specs match what was designed, find alternative equipment when supply chain issues hit, and communicate directly with manufacturer reps — all from one platform instead of scattered emails and outdated catalogs.</p>
+            <p className="text-xs text-cyan-400/60 mt-3 font-medium">Uses for free: Spec verification, alternatives, rep contacts</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Contacts ──────────────────────────────────────────────────────── */}
+      <section className="px-4 sm:px-6 pb-24 max-w-6xl mx-auto w-full">
+        <div className="section-divider mb-16" />
+
+        <div className="text-center mb-14">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">Target Contacts</h2>
+          <p className="text-slate-400 max-w-2xl mx-auto">Key people across every organization we should be talking to.</p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {/* Manufacturers */}
+          <div className="glass rounded-xl p-5">
+            <h3 className="text-sm font-bold text-amber-300 uppercase tracking-wider mb-4">Manufacturers</h3>
+            <div className="space-y-3">
+              <div>
+                <p className="text-sm text-white font-medium">Jon Creisher</p>
+                <p className="text-xs text-slate-500">Director, Strategic Partnerships — Greenheck</p>
+                <p className="text-xs text-blue-400">jon.creisher@greenheck.com</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Engineering */}
+          <div className="glass rounded-xl p-5">
+            <h3 className="text-sm font-bold text-green-300 uppercase tracking-wider mb-4">Engineering Firms</h3>
+            <div className="space-y-3">
+              <div>
+                <p className="text-sm text-white font-medium">Rod Manson</p>
+                <p className="text-xs text-slate-500">Director — Buro Happold</p>
+                <p className="text-xs text-blue-400">rod.manson@burohappold.com</p>
+              </div>
+              <div>
+                <p className="text-sm text-white font-medium">May Winfield</p>
+                <p className="text-xs text-slate-500">Global Director, Commercial &amp; Digital Risks — Buro Happold</p>
+                <p className="text-xs text-blue-400">may.winfield@burohappold.com</p>
+              </div>
+            </div>
+          </div>
+
+          {/* GCs & Subs */}
+          <div className="glass rounded-xl p-5">
+            <h3 className="text-sm font-bold text-cyan-300 uppercase tracking-wider mb-4">GCs &amp; Subcontractors</h3>
+            <div className="space-y-3">
+              <div>
+                <p className="text-sm text-white font-medium">Loren Beas</p>
+                <p className="text-xs text-slate-500">Director of Business Development — Structure Tone</p>
+                <p className="text-xs text-blue-400">loren.beas@structuretone.com</p>
+              </div>
+              <div>
+                <p className="text-sm text-white font-medium">Marty Cunningham</p>
+                <p className="text-xs text-slate-500">EVP, Business Development — Donnelly Mechanical</p>
+                <p className="text-xs text-blue-400">mcunningham@donnellymech.com</p>
+              </div>
+              <div>
+                <p className="text-sm text-white font-medium">Tiziano Sartori</p>
+                <p className="text-xs text-slate-500">Chief Operating Officer — Donnelly Mechanical</p>
+                <p className="text-xs text-blue-400">tsartori@donnellymech.com</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Standards & Licensing */}
+          <div className="glass rounded-xl p-5">
+            <h3 className="text-sm font-bold text-purple-300 uppercase tracking-wider mb-4">Standards &amp; Licensing</h3>
+            <div className="space-y-3">
+              <div>
+                <p className="text-sm text-white font-medium">Jim Pauley</p>
+                <p className="text-xs text-slate-500">President &amp; CEO — NFPA</p>
+                <p className="text-xs text-blue-400">jpauley@nfpa.org</p>
+              </div>
+              <div>
+                <p className="text-sm text-white font-medium">Christian Dubay</p>
+                <p className="text-xs text-slate-500">VP &amp; Chief Engineer — NFPA</p>
+                <p className="text-xs text-blue-400">cdubay@nfpa.org</p>
+              </div>
+              <div>
+                <p className="text-sm text-white font-medium">Sophia Muirhead</p>
+                <p className="text-xs text-slate-500">Executive Director &amp; COO — IEEE</p>
+                <p className="text-xs text-blue-400">s.muirhead@ieee.org</p>
+              </div>
+              <div>
+                <p className="text-sm text-white font-medium">Travis Voss</p>
+                <p className="text-xs text-slate-500">Director, Innovative Technology — SMACNA</p>
+                <p className="text-xs text-blue-400">tvoss@smacna.org</p>
+              </div>
+              <div>
+                <p className="text-sm text-white font-medium">Susannah Forde</p>
+                <p className="text-xs text-slate-500">Executive Director, Marketing — SMACNA</p>
+                <p className="text-xs text-blue-400">sforde@smacna.org</p>
+              </div>
+              <div>
+                <p className="text-sm text-white font-medium">Hilari Varnadore</p>
+                <p className="text-xs text-slate-500">VP, Sustainable Cities — USGBC</p>
+                <p className="text-xs text-blue-400">hvarnadore@usgbc.org</p>
+              </div>
+              <div>
+                <p className="text-sm text-white font-medium">Mark Fasel</p>
+                <p className="text-xs text-slate-500">Director, PMG Technical Resources — ICC</p>
+                <p className="text-xs text-blue-400">mfasel@iccsafe.org</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
