@@ -218,16 +218,6 @@ export default function Page() {
         </div>
       </div>
 
-      {/* ── The Problem ──────────────────────────────────────────────────── */}
-      <section className="px-4 sm:px-6 pb-12 max-w-3xl mx-auto w-full">
-        <div className="glass rounded-2xl p-6 sm:p-8 text-center">
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-            Today, MEP engineers spend hours digging through manufacturer PDFs, calling reps for specs, cross-referencing codes manually, and emailing back and forth for quotes. There is no single source of truth for equipment selection.
-          </p>
-          <p className="text-sm sm:text-base text-white font-semibold mt-3">BuildVision changes that.</p>
-        </div>
-      </section>
-
       {/* ── Live Demo ──────────────────────────────────────────────────────── */}
       <section className="px-4 sm:px-6 pb-24 max-w-4xl mx-auto w-full">
         <div className="glass rounded-2xl overflow-hidden" style={{ boxShadow: '0 0 60px rgba(96,165,250,0.07)' }}>
