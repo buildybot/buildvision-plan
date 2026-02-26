@@ -190,6 +190,34 @@ export default function Page() {
         </p>
       </section>
 
+      {/* ── Partner Ticker ───────────────────────────────────────────────── */}
+      <div className="overflow-hidden py-6 border-y border-white/5 mb-12">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-600 text-center mb-4">Potential Partners &amp; Data Sources</p>
+        <div className="relative">
+          <div className="flex animate-ticker whitespace-nowrap">
+            {[...Array(2)].map((_, copy) => (
+              <div key={copy} className="flex items-center gap-12 sm:gap-16 px-8">
+                {[
+                  { name: 'ASHRAE', sub: 'Standards & Handbooks' },
+                  { name: 'AHRI', sub: 'Certified Performance Data' },
+                  { name: 'IEEE', sub: 'Electrical Standards' },
+                  { name: 'NFPA', sub: 'Fire & Life Safety Codes' },
+                  { name: 'SMACNA', sub: 'Sheet Metal & HVAC Standards' },
+                  { name: 'USGBC', sub: 'LEED & Sustainability' },
+                  { name: 'ICC', sub: 'International Building Codes' },
+                  { name: 'NEMA', sub: 'Electrical Equipment Standards' },
+                ].map((org) => (
+                  <div key={`${copy}-${org.name}`} className="flex flex-col items-center flex-shrink-0">
+                    <span className="text-lg sm:text-xl font-bold tracking-wide text-slate-300">{org.name}</span>
+                    <span className="text-[10px] text-slate-600">{org.sub}</span>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* ── Live Demo ──────────────────────────────────────────────────────── */}
       <section className="px-4 sm:px-6 pb-24 max-w-4xl mx-auto w-full">
         <div className="glass rounded-2xl overflow-hidden" style={{ boxShadow: '0 0 60px rgba(96,165,250,0.07)' }}>
