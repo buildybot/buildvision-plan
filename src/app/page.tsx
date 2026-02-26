@@ -668,7 +668,9 @@ export default function Page() {
         {/* ── Flywheel ── */}
         <div className="rounded-2xl p-6 sm:p-8 text-center" style={{ background: 'rgba(52,211,153,0.03)', border: '1px solid rgba(52,211,153,0.1)' }}>
           <p className="text-xs font-semibold uppercase tracking-widest text-slate-500 mb-4">The Flywheel</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-sm">
+          {/* Engineer lane */}
+          <p className="text-[10px] uppercase tracking-widest text-green-400/50 font-semibold mb-2">Engineers &amp; Designers</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-sm mb-5">
             <span className="glass rounded-lg px-3 py-2 text-green-300 font-medium">More verified engineers</span>
             <span className="text-slate-600">→</span>
             <span className="glass rounded-lg px-3 py-2 text-blue-300 font-medium">More query data &amp; signal</span>
@@ -679,7 +681,22 @@ export default function Page() {
             <span className="text-slate-600">→</span>
             <span className="glass rounded-lg px-3 py-2 text-green-300 font-medium">More engineers</span>
           </div>
-          <p className="text-xs text-slate-500 mt-5 max-w-xl mx-auto">OpenEvidence proved this model at $150M+ ARR with 90%+ margins. The construction industry has the same dynamics: high-value professionals, decision-critical information, and manufacturers willing to pay for access.</p>
+
+          {/* GC / Sub lane */}
+          <p className="text-[10px] uppercase tracking-widest text-cyan-400/50 font-semibold mb-2">GCs &amp; Subcontractors</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 text-sm">
+            <span className="glass rounded-lg px-3 py-2 text-cyan-300 font-medium">GCs &amp; subs use BV for procurement</span>
+            <span className="text-slate-600">→</span>
+            <span className="glass rounded-lg px-3 py-2 text-blue-300 font-medium">Project-level equipment data</span>
+            <span className="text-slate-600">→</span>
+            <span className="glass rounded-lg px-3 py-2 text-amber-300 font-medium">Manufacturers see real demand</span>
+            <span className="text-slate-600">→</span>
+            <span className="glass rounded-lg px-3 py-2 text-purple-300 font-medium">Faster quotes &amp; better pricing</span>
+            <span className="text-slate-600">→</span>
+            <span className="glass rounded-lg px-3 py-2 text-cyan-300 font-medium">More GCs adopt BV</span>
+          </div>
+
+          <p className="text-xs text-slate-500 mt-6 max-w-xl mx-auto">OpenEvidence proved this model at $150M+ ARR with 90%+ margins. The construction industry has the same dynamics: high-value professionals, decision-critical information, and manufacturers willing to pay for access.</p>
         </div>
       </section>
 
