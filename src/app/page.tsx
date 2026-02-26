@@ -740,45 +740,126 @@ export default function Page() {
           <p className="text-slate-400 max-w-2xl mx-auto">Key people at standards organizations for data and content licensing partnerships.</p>
         </div>
 
-        <div className="max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* AHRI */}
           <div className="glass rounded-xl p-5">
-            <h3 className="text-sm font-bold text-purple-300 uppercase tracking-wider mb-4">Standards &amp; Licensing Contacts</h3>
+            <h3 className="text-sm font-bold text-purple-300 mb-4">AHRI</h3>
             <div className="space-y-3">
-              <div>
-                <p className="text-sm text-white font-medium">Jim Pauley</p>
-                <p className="text-xs text-slate-500">President &amp; CEO — NFPA</p>
-                <p className="text-xs text-blue-400">jpauley@nfpa.org</p>
-              </div>
-              <div>
-                <p className="text-sm text-white font-medium">Christian Dubay</p>
-                <p className="text-xs text-slate-500">VP &amp; Chief Engineer — NFPA</p>
-                <p className="text-xs text-blue-400">cdubay@nfpa.org</p>
-              </div>
-              <div>
-                <p className="text-sm text-white font-medium">Sophia Muirhead</p>
-                <p className="text-xs text-slate-500">Executive Director &amp; COO — IEEE</p>
-                <p className="text-xs text-blue-400">s.muirhead@ieee.org</p>
-              </div>
-              <div>
-                <p className="text-sm text-white font-medium">Travis Voss</p>
-                <p className="text-xs text-slate-500">Director, Innovative Technology — SMACNA</p>
-                <p className="text-xs text-blue-400">tvoss@smacna.org</p>
-              </div>
-              <div>
-                <p className="text-sm text-white font-medium">Susannah Forde</p>
-                <p className="text-xs text-slate-500">Executive Director, Marketing — SMACNA</p>
-                <p className="text-xs text-blue-400">sforde@smacna.org</p>
-              </div>
-              <div>
-                <p className="text-sm text-white font-medium">Hilari Varnadore</p>
-                <p className="text-xs text-slate-500">VP, Sustainable Cities — USGBC</p>
-                <p className="text-xs text-blue-400">hvarnadore@usgbc.org</p>
-              </div>
-              <div>
-                <p className="text-sm text-white font-medium">Mark Fasel</p>
-                <p className="text-xs text-slate-500">Director, PMG Technical Resources — ICC</p>
-                <p className="text-xs text-blue-400">mfasel@iccsafe.org</p>
-              </div>
+              {[
+                { name: 'Henry Hwong', title: 'SVP, Global Operations', email: 'hhwong@ahrinet.org' },
+                { name: 'Xudong Wang', title: 'VP of Research', email: 'xwang@ahrinet.org' },
+                { name: 'Francis Dietz', title: 'VP, Public Affairs', email: 'fdietz@ahrinet.org' },
+              ].map((c) => (
+                <div key={c.email}>
+                  <p className="text-sm text-white font-medium">{c.name}</p>
+                  <p className="text-xs text-slate-500">{c.title}</p>
+                  <p className="text-xs text-blue-400">{c.email}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ASHRAE */}
+          <div className="glass rounded-xl p-5">
+            <h3 className="text-sm font-bold text-purple-300 mb-4">ASHRAE</h3>
+            <div className="space-y-3">
+              {[
+                { name: 'Jeff Littleton', title: 'EVP & Chief Staff Officer', email: 'jlittleton@ashrae.org' },
+                { name: 'Mark Owen', title: 'Director, Publications & Education', email: 'mowen@ashrae.org' },
+              ].map((c) => (
+                <div key={c.email}>
+                  <p className="text-sm text-white font-medium">{c.name}</p>
+                  <p className="text-xs text-slate-500">{c.title}</p>
+                  <p className="text-xs text-blue-400">{c.email}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* NFPA */}
+          <div className="glass rounded-xl p-5">
+            <h3 className="text-sm font-bold text-purple-300 mb-4">NFPA</h3>
+            <div className="space-y-3">
+              {[
+                { name: 'Jim Pauley', title: 'President & CEO', email: 'jpauley@nfpa.org' },
+                { name: 'Jan Rimmel', title: 'Director, Global Publications & Licensing', email: 'jrimmel@nfpa.org' },
+                { name: 'Mike Brunzell', title: 'VP, Global Business Development', email: 'mbrunzell@nfpa.org' },
+                { name: 'Christian Dubay', title: 'VP & Chief Engineer', email: 'cdubay@nfpa.org' },
+              ].map((c) => (
+                <div key={c.email}>
+                  <p className="text-sm text-white font-medium">{c.name}</p>
+                  <p className="text-xs text-slate-500">{c.title}</p>
+                  <p className="text-xs text-blue-400">{c.email}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ICC */}
+          <div className="glass rounded-xl p-5">
+            <h3 className="text-sm font-bold text-purple-300 mb-4">ICC</h3>
+            <div className="space-y-3">
+              {[
+                { name: 'Ryan Colker', title: 'Exec Director, Energy, Resilience & Innovation', email: 'rcolker@iccsafe.org' },
+                { name: 'Judy Zakreski', title: 'SVP, Global Operations & Solutions', email: 'jzakreski@iccsafe.org' },
+                { name: 'Mark Fasel', title: 'Director, PMG Technical Resources', email: 'mfasel@iccsafe.org' },
+                { name: 'Dottie Mazzarella', title: 'VP, Government Relations', email: 'dmazzarella@iccsafe.org' },
+              ].map((c) => (
+                <div key={c.email}>
+                  <p className="text-sm text-white font-medium">{c.name}</p>
+                  <p className="text-xs text-slate-500">{c.title}</p>
+                  <p className="text-xs text-blue-400">{c.email}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* USGBC */}
+          <div className="glass rounded-xl p-5">
+            <h3 className="text-sm font-bold text-purple-300 mb-4">USGBC</h3>
+            <div className="space-y-3">
+              {[
+                { name: 'Peter Templeton', title: 'President & CEO', email: 'ptempleton@usgbc.org' },
+                { name: 'Mili Majumdar', title: 'SVP, Innovation & Research', email: 'mmajumdar@usgbc.org' },
+                { name: 'Karen Jernigan', title: 'Director, Market Transformation', email: 'kjernigan@usgbc.org' },
+                { name: 'Hilari Varnadore', title: 'VP, Sustainable Cities', email: 'hvarnadore@usgbc.org' },
+              ].map((c) => (
+                <div key={c.email}>
+                  <p className="text-sm text-white font-medium">{c.name}</p>
+                  <p className="text-xs text-slate-500">{c.title}</p>
+                  <p className="text-xs text-blue-400">{c.email}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* IEEE + SMACNA */}
+          <div className="glass rounded-xl p-5">
+            <h3 className="text-sm font-bold text-purple-300 mb-4">IEEE</h3>
+            <div className="space-y-3">
+              {[
+                { name: 'Sophia Muirhead', title: 'Executive Director & COO', email: 's.muirhead@ieee.org' },
+              ].map((c) => (
+                <div key={c.email}>
+                  <p className="text-sm text-white font-medium">{c.name}</p>
+                  <p className="text-xs text-slate-500">{c.title}</p>
+                  <p className="text-xs text-blue-400">{c.email}</p>
+                </div>
+              ))}
+            </div>
+            <h3 className="text-sm font-bold text-purple-300 mb-4 mt-5">SMACNA</h3>
+            <div className="space-y-3">
+              {[
+                { name: 'Seth Lennon', title: 'Director, Content Development & Media', email: 'slennon@smacna.org' },
+                { name: 'Travis Voss', title: 'Director, Innovative Technology', email: 'tvoss@smacna.org' },
+                { name: 'Susannah Forde', title: 'Exec Director, Marketing', email: 'sforde@smacna.org' },
+              ].map((c) => (
+                <div key={c.email}>
+                  <p className="text-sm text-white font-medium">{c.name}</p>
+                  <p className="text-xs text-slate-500">{c.title}</p>
+                  <p className="text-xs text-blue-400">{c.email}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
